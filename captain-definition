@@ -1,8 +1,4 @@
  {
   "schemaVersion": 2,
-  "dockerfileLines": [
-                        "RUN composer install",
-                        "ENV PORT 80",
-                        "EXPOSE 80",
-                    ]
+  "dockerfilePath": "./DockerFile"
  }
