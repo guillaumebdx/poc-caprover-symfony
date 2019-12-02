@@ -18,4 +18,4 @@ RUN curl -sSk https://getcomposer.org/installer | php -- --disable-tls && \
 #RUN addgroup --system gponty --gid 1000 && adduser --system gponty --uid 1000 --ingroup gponty
 
 # le repertoire qui contient vos sources (attention : dans le contenaire, donc le repertoire à droite du mapping du docker-compose)
-#WORKDIR /var/www/
+WORKDIR /var/www/
