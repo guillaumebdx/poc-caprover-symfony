@@ -35,9 +35,6 @@ RUN cat /usr/local/etc/php/conf.d/local.ini
 RUN rm -rf /etc/nginx/sites-enabled
 RUN mkdir -p /etc/nginx/sites-enabled
 
-RUN php bin/console cache:clear
-
-
 # Expose port 80 and start php-fpm server
 EXPOSE 80
 CMD ["/docker-entry.sh"]
