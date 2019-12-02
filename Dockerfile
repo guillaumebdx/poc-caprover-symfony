@@ -35,7 +35,6 @@ RUN cat /usr/local/etc/php/conf.d/local.ini
 RUN rm -rf /etc/nginx/sites-enabled
 RUN mkdir -p /etc/nginx/sites-enabled
 
-RUN chmod -R 777 /var/www/storage
 RUN php bin/console cache:clear
 
 
