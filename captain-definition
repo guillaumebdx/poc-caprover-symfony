@@ -8,4 +8,6 @@
                          "COPY ./src/ /var/www/html/",
                          "RUN composer install -d /var/www/html/"
                      ]
+    "CMD [ "php", "-S", "[::]:80", "-t", "/var/www/html" ]",
+    "EXPOSE 80",
 }
