@@ -1,0 +1,6 @@
+ {
+  "schemaVersion": 2,
+  "dockerfilePath": "./DockerFile",
+  "CMD [ "php", "-S", "[::]:80", "-t", "/var/www/html" ]",
+  "EXPOSE 80"
+ }
