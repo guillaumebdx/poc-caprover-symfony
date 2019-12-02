@@ -6,8 +6,8 @@
                          "RUN mkdir -p /usr/local/bin/ && curl -s -o installer.php \"https://getcomposer.org/installer\" && php installer.php --install-dir=/usr/local/bin --filename=composer && rm -f installer.php && composer global require \"hirak/prestissimo:^0.3\"",
                          "RUN mkdir -p /var/www/html",
                          "COPY ./src/ /var/www/html/",
-                         "RUN composer install -d /var/www/html/"
+                         "RUN composer install -d /var/www/html/",
+                         "CMD [ "php", "-S", "[::]:80", "-t", "/var/www/html" ]",
+                         "EXPOSE 80"
                      ]
-    "CMD [ "php", "-S", "[::]:80", "-t", "/var/www/html" ]",
-    "EXPOSE 80",
 }
