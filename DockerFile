@@ -3,8 +3,8 @@ FROM php:7.3-alpine
 COPY . /
 
 # Quelques library necessaires
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends locales apt-utils git;
+#RUN apt-get update \
+#    && apt-get install -y --no-install-recommends locales apt-utils git;
 
 # les locales, toujours utiles
 RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
