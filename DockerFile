@@ -6,11 +6,6 @@ COPY . /
 #RUN apt-get update \
 #    && apt-get install -y --no-install-recommends locales apt-utils git;
 
-# les locales, toujours utiles
-RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && \
-    echo "fr_FR.UTF-8 UTF-8" >> /etc/locale.gen && \
-    locale-gen
-
 # On copie le php.ini du repertoire actuel dans le contenaire
 COPY php.ini /usr/local/etc/php/php.ini
 
