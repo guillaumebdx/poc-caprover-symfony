@@ -17,5 +17,8 @@ RUN curl -sSk https://getcomposer.org/installer | php -- --disable-tls && \
 # cela va permettre que les fichiers qui sont créés dans le contenaire auront vos droits
 #RUN addgroup --system gponty --gid 1000 && adduser --system gponty --uid 1000 --ingroup gponty
 
+"CMD [ "php", "-S", "[::]:80", "-t", "/var/www/html" ]",
+"EXPOSE 80",
+
 # le repertoire qui contient vos sources (attention : dans le contenaire, donc le repertoire à droite du mapping du docker-compose)
-WORKDIR /public
+#WORKDIR /public
